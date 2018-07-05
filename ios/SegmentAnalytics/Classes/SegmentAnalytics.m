@@ -4,9 +4,13 @@
 
 #import "SegmentAnalytics.h"
 #import "RCTConvert.h"
+#if __has_include(<Analytics/SEGAnalytics.h>)
 #import <Analytics/SEGAnalytics.h>
+#else
+#import "SEGAnalytics.h"
+#endif
 #import <Foundation/Foundation.h>
-
+ 
 @implementation SegmentAnalytics
 
 RCT_EXPORT_MODULE()
